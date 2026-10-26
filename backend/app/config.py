@@ -13,7 +13,7 @@ class Settings:
         )
         self.llm_provider = os.getenv("LLM_PROVIDER", "gemini").lower()
         self.gemini_api_key = os.getenv("GEMINI_API_KEY", "")
-        self.gemini_model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+                self.gemini_model = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
         self.anthropic_api_key = os.getenv("ANTHROPIC_API_KEY", "")
         self.anthropic_model = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-6")
         self.embedding_model = os.getenv(
