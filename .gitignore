@@ -1,0 +1,16 @@
+# secrets
+.env
+
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# node
+node_modules/
+dist/
+
+# misc
+eval/results.json
+.DS_Store

@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+python-multipart
+psycopg[binary]
+pgvector
+numpy
+sentence-transformers
+pypdf
+python-dotenv
+google-genai
+anthropic
+requests
+pytest

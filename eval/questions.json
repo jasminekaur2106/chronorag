@@ -1,0 +1,17 @@
+[
+  {"question": "How many days do I have to request a refund?", "as_of": "2025-03-01",
+   "expect_any": ["30"], "forbid_any": ["14", "21"]},
+  {"question": "How many days do I have to request a refund?", "as_of": "2025-08-01",
+   "expect_any": ["14"], "forbid_any": ["30", "21"]},
+  {"question": "How many days do I have to request a refund?", "as_of": "2026-03-01",
+   "expect_any": ["21"], "forbid_any": ["30", "14"]},
+  {"question": "How do I submit a refund request?", "as_of": "2025-03-01",
+   "expect_any": ["email"], "forbid_any": ["chat"]},
+  {"question": "How do I submit a refund request?", "as_of": "2026-03-01",
+   "expect_any": ["chat"], "forbid_any": []},
+  {"question": "Can I get a refund on a gift card?", "as_of": "2025-08-01",
+   "expect_any": ["non-refundable", "not refundable", "not eligible", "cannot"], "forbid_any": []},
+  {"question": "Can I get a refund on a gift card?", "as_of": "2025-03-01",
+   "expect_any": ["don't have", "do not have", "no information", "not mention", "not specified", "does not say", "doesn't say"],
+   "forbid_any": ["non-refundable", "not refundable"]}
+]

@@ -1,0 +1,15 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: chronorag-db
+    environment:
+      POSTGRES_USER: chrono
+      POSTGRES_PASSWORD: chrono
+      POSTGRES_DB: chronorag
+    ports:
+      - "5433:5432"   # 5433 on your machine, so it won't clash with a local Postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
