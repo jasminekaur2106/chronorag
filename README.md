@@ -13,6 +13,26 @@ ChronoRAG treats every document like a repository with history:
 - **Built-in baseline:** a toggle switches to plain RAG so you can measure how much time-aware
   retrieval actually helps.
 
+## Demo
+
+Same question, same date (1 Aug 2025). The correct answer is 14 days.
+
+**ChronoRAG (time-aware retrieval):** only the paragraphs valid on that date are searched.
+
+![Time-aware answer](docs/time-aware.png)
+
+**Plain RAG (baseline):** old and new versions get mixed together.
+
+![Plain RAG answer](docs/plain-rag.png)
+
+**Semantic diff:** each change is labelled as changed, added, removed or reworded only.
+
+![Diff view](docs/diff.png)
+
+**Result on the small demo set** (7 date-based questions on a synthetic refund policy):
+time-aware RAG answered 7/7 correctly, plain RAG 2/7. This is a small controlled test,
+not a benchmark.
+
 ## How it works
 
 ```
