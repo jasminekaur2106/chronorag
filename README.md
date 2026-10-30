@@ -29,9 +29,34 @@ Same question, same date (1 Aug 2025). The correct answer is 14 days.
 
 ![Diff view](docs/diff.png)
 
-**Result on the small demo set** (7 date-based questions on a synthetic refund policy):
-time-aware RAG answered 7/7 correctly, plain RAG 2/7. This is a small controlled test,
-not a benchmark.
+## Evaluation
+
+I tested on two sets. Questions are in `eval/`, and `eval/run_eval.py` reproduces the numbers.
+
+**1. Synthetic demo (7 questions, a made-up refund policy):** time-aware RAG 7/7, plain RAG 2/7.
+
+**2. Real document (32 questions):** GitHub's public Terms of Service, loaded as 33 versions
+from its Git history (2017 to 2021), using `scripts/ingest_git_history.py`.
+
+| | Correct answers |
+|---|---|
+| ChronoRAG (time-aware retrieval) | 30 / 32 (94%) |
+| Plain RAG (same model, no date filter) | 14 / 32 (44%) |
+
+Each question is asked "as of" a date before or after a real change, and the right answer
+differs between the two dates.
+
+**Efficiency:** across the 33 versions, 337 paragraphs were embedded, compared with about
+3,680 if every version were embedded from scratch (roughly 91% fewer), because unchanged
+paragraphs are detected by content hash and reused.
+
+**Limitations (please read):**
+- One document, and the questions come from only 4 of its changes.
+- I wrote the questions by hand after reading the diffs, so they are not independently validated.
+- Scoring is a keyword check, with one run per question. LLM answers vary between runs.
+- Version dates are Git commit dates, which can differ from the date a policy officially took effect.
+- Both failures were questions asking for the title of a section. Pure semantic search can
+  miss short headings. A planned fix is hybrid search (keyword plus vector).
 
 ## How it works
 

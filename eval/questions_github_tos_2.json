@@ -1,0 +1,22 @@
+[
+  {"question": "What effective date does the Terms of Service state at the top?", "as_of": "2020-10-05",
+   "expect_any": ["April 2, 2020"], "forbid_any": ["November 16, 2020"]},
+  {"question": "What effective date does the Terms of Service state at the top?", "as_of": "2020-10-20",
+   "expect_any": ["November 16, 2020"], "forbid_any": ["April 2, 2020"]},
+  {"question": "On what grounds can GitHub remove User-Generated Content?", "as_of": "2020-10-05",
+   "expect_any": ["policies"], "forbid_any": ["mobile app stores"]},
+  {"question": "On what grounds can GitHub remove User-Generated Content?", "as_of": "2020-10-20",
+   "expect_any": ["laws"], "forbid_any": []},
+  {"question": "Can GitHub let its partners store and archive my content in public repositories?", "as_of": "2020-10-05",
+   "expect_any": [], "forbid_any": ["Arctic Code Vault"]},
+  {"question": "Can GitHub let its partners store and archive my content in public repositories?", "as_of": "2020-10-20",
+   "expect_any": ["Arctic", "Archive Program"], "forbid_any": []},
+  {"question": "In which situations may GitHub personnel access the content of my private repositories?", "as_of": "2020-10-05",
+   "expect_any": ["support"], "forbid_any": ["Privacy Statement"]},
+  {"question": "In which situations may GitHub personnel access the content of my private repositories?", "as_of": "2020-10-20",
+   "expect_any": ["Privacy Statement"], "forbid_any": []},
+  {"question": "How will GitHub notify users of material changes to the Terms?", "as_of": "2020-10-05",
+   "expect_any": ["notice", "website"], "forbid_any": ["primary email address"]},
+  {"question": "How will GitHub notify users of material changes to the Terms?", "as_of": "2020-10-20",
+   "expect_any": ["email"], "forbid_any": []}
+]

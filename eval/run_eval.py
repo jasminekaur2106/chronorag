@@ -44,6 +44,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--title", default="Acme Refund Policy")
     parser.add_argument("--sleep", type=float, default=1.0, help="seconds between AI calls")
+    parser.add_argument("--questions", default="questions.json", help="question file inside the eval folder")
     args = parser.parse_args()
 
     docs = requests.get(f"{API}/documents", timeout=30).json()
@@ -52,7 +53,7 @@ def main():
         raise SystemExit(f'Document "{args.title}" not found. Run scripts/seed_demo.py first.')
     doc_id = match[0]["id"]
 
-    questions = json.loads((HERE / "questions.json").read_text())
+    questions = json.loads((HERE / args.questions).read_text())
     scores = {True: 0, False: 0}
     scored = 0
     rows = []

@@ -1,0 +1,10 @@
+[
+  {"question": "What is the name of the GitHub mobile product mentioned in the section on removing content?", "as_of": "2021-12-01",
+   "expect_any": ["GitHub for mobile"], "forbid_any": ["GitHub Mobile"]},
+  {"question": "What is the name of the GitHub mobile product mentioned in the section on removing content?", "as_of": "2021-12-20",
+   "expect_any": ["GitHub Mobile"], "forbid_any": ["GitHub for mobile"]},
+  {"question": "Which paths are listed under redirect_from in the front matter?", "as_of": "2021-12-01",
+   "expect_any": ["/tos/"], "forbid_any": []},
+  {"question": "Which paths are listed under redirect_from in the front matter?", "as_of": "2021-12-20",
+   "expect_any": ["/tos"], "forbid_any": ["/tos/"]}
+]

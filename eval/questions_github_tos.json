@@ -1,0 +1,18 @@
+[
+  {"question": "What effective date does the Terms of Service state at the top?", "as_of": "2019-01-15",
+   "expect_any": ["May 25, 2018"], "forbid_any": ["April 19, 2019"]},
+  {"question": "What effective date does the Terms of Service state at the top?", "as_of": "2019-03-20",
+   "expect_any": ["April 19, 2019"], "forbid_any": ["May 25, 2018"]},
+  {"question": "Which accounts may have private repositories?", "as_of": "2019-01-15",
+   "expect_any": ["paid"], "forbid_any": []},
+  {"question": "Which accounts may have private repositories?", "as_of": "2019-03-20",
+   "expect_any": ["some accounts"], "forbid_any": ["such as paid"]},
+  {"question": "Which kinds of laws does the compliance clause name besides copyright and trademark laws?", "as_of": "2019-01-15",
+   "expect_any": ["export control"], "forbid_any": ["sanctions"]},
+  {"question": "Which kinds of laws does the compliance clause name besides copyright and trademark laws?", "as_of": "2019-03-20",
+   "expect_any": ["sanctions"], "forbid_any": []},
+  {"question": "What terms apply if I purchase and use GitHub Learning Lab?", "as_of": "2019-03-20",
+   "expect_any": ["lab.github.com", "Terms and Conditions"], "forbid_any": []},
+  {"question": "Does the content policy prohibit content that glorifies violence?", "as_of": "2019-03-20",
+   "expect_any": ["gratuitously"], "forbid_any": []}
+]
